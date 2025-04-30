@@ -1,30 +1,54 @@
 # nekit
 
 using System;
+
 using System.Collections.Generic;
+
 using System.Linq;
+
 using System.Text;
+
 using System.Threading.Tasks;
 
 namespace s_massivom
+
 {
+
     internal class Program
+    
     {
+    
         static void Main()
+        
         {
+        
                 Console.Write("сколько элементов в массивах: ");
+                
                 double x = Convert.ToDouble(Console.ReadLine());
+                
                 while (x < 0 && x - Convert.ToInt32(x) != 0)
+                
                 {
+                
                     Console.Write("массив не может быть отрицательным и должно быть целым числом. повторите ввод: ");
+                    
                     x = Convert.ToDouble(Console.ReadLine());
+                    
                 }
+                
                 massive massive = new massive(Convert.ToInt32(x));
+                
                 massive.slozhenie();
+                
                 massive.vichitanie();
+                
+                
                 massive.umnozhenie();
+                
                 massive.delenie();
+                
                 massive.vivodchisla();
+                
                 Console.ReadKey();
         }
     }
